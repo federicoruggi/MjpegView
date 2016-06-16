@@ -7,7 +7,7 @@ import android.graphics.Bitmap;
  */
 public interface ImjpegViewListener {
 
-    void sucess();
+    void success();
 
     void error();
 

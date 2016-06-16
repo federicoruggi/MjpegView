@@ -118,7 +118,7 @@ public class MjpegView extends SurfaceView implements SurfaceHolder.Callback {
             Canvas c = null;
             Paint p = new Paint();
             String fps = "";
-            boolean sucess = false;
+            boolean success = false;
 
             mIn = MjpegInputStream.read(url);
 
@@ -131,15 +131,14 @@ public class MjpegView extends SurfaceView implements SurfaceHolder.Callback {
                     try {
                         try {
                             bitmap = mIn.readMjpegFrame();
-                            sucess = true;
+                            success = true;
                         } catch (IOException e) {
-                            sucess = false;
+                            success = false;
                             break;
                         }
                         c = mSurfaceHolder.lockCanvas();
                         synchronized (mSurfaceHolder) {
-                            destRect = destRect(bitmap.getWidth(),
-                                    bitmap.getHeight());
+                            destRect = destRect(bitmap.getWidth(), bitmap.getHeight());
                             c.drawColor(overlayBackgroundColor);
                             c.drawBitmap(bitmap, null, destRect, p);
                             if (showFps) {
@@ -162,12 +161,15 @@ public class MjpegView extends SurfaceView implements SurfaceHolder.Callback {
                             }
                         }
                     } finally {
-                        if (c != null) {
-                            mSurfaceHolder.unlockCanvasAndPost(c);
+                        if (success) {
+                            if (c != null) {
+                                mSurfaceHolder.unlockCanvasAndPost(c);
+                            }
                         }
                     }
-                    if (listener != null)
-                        listener.sucess();
+                    if (listener != null) {
+                        listener.success();
+                    }
                 }
             }
             return null;
