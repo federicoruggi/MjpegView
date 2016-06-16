@@ -34,8 +34,7 @@ public class MjpegInputStream extends DataInputStream {
         try {
             response = client.newCall(new Request.Builder().url(url).build()).execute();
             return new MjpegInputStream(response.body().byteStream());
-        } catch (IOException e) {
-            Logger.warn(e.getMessage());
+        } catch (IOException ignored) {
         }
         return null;
     }
