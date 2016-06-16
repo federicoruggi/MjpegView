@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/federico/src/Android/MjpegView1/app/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "outputFile": "/Users/federico/src/Android/MjpegView/app/build/intermediates/res/merged/androidTest/debug/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 97
                 },
                 "from": {
-                    "file": "/Users/federico/src/Android/MjpegView1/app/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/Users/federico/src/Android/MjpegView/app/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 155
                 },
                 "from": {
-                    "file": "/Users/federico/src/Android/MjpegView1/app/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/Users/federico/src/Android/MjpegView/app/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
